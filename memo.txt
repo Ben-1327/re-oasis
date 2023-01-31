@@ -1,0 +1,20 @@
+予約URL
+https://www.oasisreserve.com/allservice/reserve/add?event_id=1037673&date=2023-02-07&time=19%3A20
+
+詳細URL
+https://www.oasisreserve.com/allservice/event/detail?id=1037673&date=2023-02-07&time=19%3A20
+
+
+
+driver.get('https://www.oasisreserve.com/allservice/reserve/add?event_id=1037327&date=2023-02-03&time=12%3A00')
+
+elem_position = driver.find_element(By.NAME,'position')
+select = Select(elem_position)
+elem_check_box = driver.find_element(By.ID,'reserve_policy')
+elem_confirm_btn = driver.find_element(By.CLASS_NAME,'js_submit_form')
+
+select.select_by_value('2')
+elem_check_box.click()
+elem_confirm_btn.click()
+
+
